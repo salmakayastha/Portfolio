@@ -1,0 +1,230 @@
+.contact {
+  background: white;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-info h3 {
+  font-size: 1.8rem;
+  color: var(--green-900);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.contact-info > p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-600);
+  margin-bottom: 2rem;
+}
+
+.contact-details {
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--bg-50);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: var(--green-600);
+  background: var(--leaf-100);
+  padding: 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-text h4 {
+  font-size: 1rem;
+  color: var(--green-900);
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.contact-text a {
+  color: var(--green-600);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact-text a:hover {
+  color: var(--green-900);
+}
+
+.social-links h4 {
+  font-size: 1.2rem;
+  color: var(--green-900);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem 1rem;
+  background: var(--bg-50);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--text-700);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.social-link:hover {
+  background: var(--social-color);
+  color: white;
+  transform: translateX(5px);
+  border-color: var(--social-color);
+}
+
+.social-link svg {
+  font-size: 1.2rem;
+}
+
+.contact-form-container {
+  background: linear-gradient(135deg, #f8f9fa, #e8f5e8);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+  font-size: 1.5rem;
+  color: #2d5016;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2d5016;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid #e8f5e8;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4a7c59;
+  box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #4a7c59, #2d5016);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(74, 124, 89, 0.3);
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-form-container {
+    padding: 1.5rem;
+  }
+
+  .social-icons {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .social-link {
+    flex: 1;
+    min-width: 120px;
+    justify-content: center;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-icon {
+    margin-bottom: 0.5rem;
+  }
+
+  .btn-another {
+  width: auto;             /* only as wide as content */
+  padding: 0.6rem 1.5rem;  /* smaller padding */
+  font-size: 1rem;         /* slightly smaller font */
+  margin-top: 1.5rem;      /* space from the message above */
+  border-radius: 8px;      /* keep same radius as main button */
+  background: linear-gradient(135deg, #4a7c59, #2d5016); /* same as .btn-submit */
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-another:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(74, 124, 89, 0.3); /* same as .btn-submit hover */
+}
+
+}

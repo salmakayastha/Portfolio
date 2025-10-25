@@ -1,0 +1,252 @@
+.experience {
+  background: white;
+}
+
+.experience-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+}
+
+.subsection-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--green-900);
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.section-icon {
+  color: var(--green-600);
+  font-size: 1.3rem;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--green-600), var(--green-900));
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 2rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -2rem;
+  top: 0.5rem;
+  width: 12px;
+  height: 12px;
+  background: var(--green-600);
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 3px var(--green-600);
+}
+
+.timeline-content {
+  background: var(--bg-50);
+  padding: 2rem;
+  border-radius: 10px;
+  border-left: 4px solid var(--green-600);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.experience-header {
+  margin-bottom: 1rem;
+}
+
+.experience-title {
+  font-size: 1.3rem;
+  color: var(--green-900);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.experience-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--text-600);
+}
+
+.company {
+  font-weight: 600;
+  color: var(--green-600);
+}
+
+.period, .location {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.icon {
+  font-size: 0.8rem;
+}
+
+.type {
+  background: var(--leaf-100);
+  color: var(--green-900);
+  padding: 0.2rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.experience-description {
+  color: var(--text-600);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.achievements h5 {
+  color: var(--green-900);
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.achievements ul {
+  list-style: none;
+  padding: 0;
+}
+
+.achievements li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-600);
+  line-height: 1.5;
+}
+
+.achievements li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--green-600);
+  font-weight: bold;
+}
+
+.education-section {
+  background: linear-gradient(135deg, var(--bg-50), var(--leaf-100));
+  padding: 2rem;
+  border-radius: 15px;
+  height: fit-content;
+}
+
+.education-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.education-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--leaf-100);
+}
+
+.degree {
+  font-size: 1.2rem;
+  color: var(--green-900);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.education-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+  color: var(--text-600);
+}
+
+.institution {
+  font-weight: 600;
+  color: var(--green-600);
+}
+
+.gpa {
+  background: var(--leaf-100);
+  color: var(--green-900);
+  padding: 0.2rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.relevant-courses h5 {
+  color: var(--green-900);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.courses-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.course-tag {
+  background: #f0f8f0;
+  color: var(--green-600);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid var(--leaf-100);
+}
+
+@media (max-width: 768px) {
+  .experience-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .timeline {
+    padding-left: 1.5rem;
+  }
+
+  .timeline::before {
+    left: 0.75rem;
+  }
+
+  .timeline-item {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-marker {
+    left: -1.5rem;
+  }
+
+  .experience-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .education-meta {
+    gap: 0.5rem;
+  }
+}
